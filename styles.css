@@ -1,14 +1,18 @@
 :root {
-  --ink: #4f5f2e;
-  --deep: #2f4525;
-  --leaf: #778241;
-  --olive: #b4c469;
-  --sky: #a8cce7;
-  --blue: #3f7395;
-  --sun: #f2c60f;
-  --cream: #fff2b8;
-  --paper: #fff8d8;
-  --soft: #f8df78;
+  --cream: #fbf3cf;
+  --naples: #f7d467;
+  --light-olive: #b9c465;
+  --neptune: #8fbd9f;
+  --bruno: #0f5268;
+  --ink: #0f5268;
+  --deep: #0f5268;
+  --leaf: #b9c465;
+  --olive: #8fbd9f;
+  --sky: #8fbd9f;
+  --blue: #0f5268;
+  --sun: #f7d467;
+  --paper: #fbf3cf;
+  --soft: #f7d467;
 }
 
 * {
@@ -21,9 +25,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    linear-gradient(180deg, rgba(255, 248, 216, 0.98), rgba(255, 242, 184, 0.62)),
-    var(--paper);
+  background: var(--cream);
   color: var(--ink);
   font-family: Avenir, "Trebuchet MS", Arial, Helvetica, sans-serif;
 }
@@ -46,7 +48,7 @@ main {
   min-height: 100svh;
   padding: 24px clamp(18px, 4vw, 64px) 56px;
   background:
-    linear-gradient(90deg, rgba(47, 69, 37, 0.9), rgba(79, 95, 46, 0.66) 44%, rgba(168, 204, 231, 0.2)),
+    linear-gradient(90deg, rgba(15, 82, 104, 0.92), rgba(15, 82, 104, 0.62) 45%, rgba(143, 189, 159, 0.18)),
     url("./public/assets/image-01.jpg") center / cover;
   color: var(--cream);
 }
@@ -127,8 +129,8 @@ main {
 }
 
 .nav-links {
-  background: rgba(255, 246, 215, 0.9);
-  border: 1px solid rgba(20, 57, 46, 0.2);
+  background: rgba(251, 243, 207, 0.94);
+  border: 1px solid rgba(15, 82, 104, 0.28);
   border-radius: 999px;
   box-shadow: 0 14px 30px rgba(5, 25, 16, 0.12);
   color: var(--ink);
@@ -226,7 +228,7 @@ h2 {
 }
 
 .secondary {
-  border: 1px solid rgba(255, 246, 215, 0.55);
+  border: 1px solid rgba(251, 243, 207, 0.68);
 }
 
 .hero-media {
@@ -236,7 +238,7 @@ h2 {
 }
 
 .hero-main {
-  border: 8px solid rgba(255, 246, 215, 0.78);
+  border: 8px solid var(--cream);
   box-shadow: 0 28px 70px rgba(5, 25, 16, 0.36);
   object-fit: cover;
   aspect-ratio: 0.78;
@@ -257,7 +259,7 @@ h2 {
 .brand-panel {
   align-items: center;
   background:
-    linear-gradient(90deg, rgba(255, 242, 184, 0.96), rgba(255, 248, 216, 0.98)),
+    linear-gradient(90deg, rgba(251, 243, 207, 0.98), rgba(247, 212, 103, 0.28)),
     var(--cream);
   display: grid;
   gap: clamp(30px, 6vw, 80px);
@@ -357,15 +359,14 @@ h2 {
 
 .tile-section {
   background:
-    linear-gradient(rgba(255, 248, 216, 0.02), rgba(255, 248, 216, 0.02)),
-    url("./public/assets/image-06.jpg") center / cover fixed;
-  min-height: clamp(360px, 58vw, 760px);
+    url("./public/assets/azulejo-horizontal.jpg") center / cover fixed;
+  min-height: clamp(340px, 48vw, 620px);
 }
 
 .catalog {
   background:
-    linear-gradient(180deg, rgba(168, 204, 231, 0.22), rgba(255, 248, 216, 0.96) 28%),
-    var(--paper);
+    linear-gradient(180deg, rgba(143, 189, 159, 0.28), rgba(251, 243, 207, 1) 30%),
+    var(--cream);
 }
 
 .catalog-heading {
@@ -388,8 +389,8 @@ h2 {
 }
 
 .product-card {
-  background: rgba(255, 248, 216, 0.96);
-  border: 1px solid rgba(79, 95, 46, 0.16);
+  background: rgba(251, 243, 207, 0.96);
+  border: 1px solid rgba(15, 82, 104, 0.18);
   border-radius: 8px;
   overflow: hidden;
   transition: transform 180ms ease, box-shadow 180ms ease;
@@ -437,7 +438,7 @@ h2 {
 .visit {
   align-items: end;
   background:
-    linear-gradient(rgba(47, 69, 37, 0.56), rgba(47, 69, 37, 0.74)),
+    linear-gradient(rgba(15, 82, 104, 0.52), rgba(15, 82, 104, 0.76)),
     url("./public/assets/image-04.jpg") center / cover;
   color: var(--cream);
   display: flex;
@@ -451,7 +452,7 @@ h2 {
 }
 
 .visit-details {
-  background: rgba(255, 248, 216, 0.94);
+  background: rgba(251, 243, 207, 0.94);
   border-radius: 8px;
   color: var(--deep);
   min-width: min(100%, 330px);
