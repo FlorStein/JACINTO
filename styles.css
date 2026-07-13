@@ -72,16 +72,15 @@ main {
 }
 
 .wordmark {
-  background: var(--cream);
-  border: 1px solid var(--tile-blue);
+  background: var(--tile-blue);
+  border: 1px solid var(--cream);
   border-radius: 999px;
-  box-shadow: 6px 6px 0 var(--naples);
-  color: var(--tile-blue);
+  color: var(--cream);
   gap: 0;
   font-family: Georgia, "Times New Roman", serif;
   font-size: clamp(1rem, 2vw, 1.25rem);
   font-weight: 800;
-  padding: 10px 18px;
+  padding: 9px 17px;
 }
 
 .nav-links {
@@ -117,10 +116,10 @@ main {
 
 .hero-copy {
   color: var(--tile-blue);
-  max-width: 640px;
+  max-width: 600px;
   margin: 0 auto;
   position: relative;
-  transform: translateY(clamp(18px, 3vw, 44px));
+  transform: translateY(clamp(-8px, -1vw, 0px));
   z-index: 2;
 }
 
@@ -162,9 +161,11 @@ h2 {
 
 .lead {
   color: var(--tile-blue);
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  line-height: 1.6;
-  max-width: 560px;
+  font-size: clamp(0.98rem, 1.55vw, 1.16rem);
+  line-height: 1.5;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-actions {
@@ -208,7 +209,9 @@ h2 {
   background: var(--cream);
   display: grid;
   gap: clamp(30px, 6vw, 80px);
-  grid-template-columns: minmax(220px, 0.45fr) minmax(0, 0.8fr);
+  grid-template-columns: minmax(280px, 0.44fr) minmax(0, 0.86fr);
+  min-height: 100svh;
+  place-content: center;
 }
 
 .brand-panel > * {
@@ -226,10 +229,10 @@ h2 {
 .arch-logo {
   border: 2px solid var(--bruno);
   border-radius: 999px 999px 0 0;
-  height: 340px;
+  height: clamp(520px, 62vh, 680px);
   overflow: hidden;
   position: relative;
-  width: 240px;
+  width: clamp(330px, 28vw, 460px);
 }
 
 .arch-logo::after {
@@ -246,7 +249,7 @@ h2 {
 .arch-logo img {
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: center top;
   width: 100%;
 }
 
@@ -404,6 +407,10 @@ h2 {
     grid-template-rows: 260px 260px;
   }
 
+  .brand-panel {
+    min-height: auto;
+  }
+
   .story-card-2 {
     grid-column: auto;
   }
@@ -431,7 +438,7 @@ h2 {
   }
 
   .wordmark {
-    box-shadow: 4px 4px 0 var(--naples);
+    padding: 8px 15px;
   }
 
   .nav-links {
@@ -449,7 +456,7 @@ h2 {
   }
 
   .hero-copy {
-    transform: translateY(18px);
+    transform: translateY(0);
   }
 
   h2 {
@@ -461,8 +468,8 @@ h2 {
   }
 
   .arch-logo {
-    height: 300px;
-    width: min(100%, 220px);
+    height: 420px;
+    width: min(100%, 300px);
   }
 
   .story-grid,
