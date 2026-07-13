@@ -13,6 +13,7 @@
   --sun: #f7d467;
   --paper: #fbf3cf;
   --soft: #f7d467;
+  --tile-blue: #1f3f94;
 }
 
 * {
@@ -47,8 +48,8 @@ main {
 .hero {
   min-height: 100svh;
   padding: 24px clamp(18px, 4vw, 64px) 56px;
-  background: var(--cream) url("./public/assets/azulejo-horizontal.jpg") center / cover fixed;
-  color: var(--bruno);
+  background: var(--cream) url("./public/assets/hero-azulejo-cartela.png") center / cover no-repeat;
+  color: var(--tile-blue);
 }
 
 .nav {
@@ -96,20 +97,24 @@ main {
 .hero-grid {
   align-items: center;
   display: grid;
-  gap: clamp(42px, 6vw, 84px);
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 420px);
-  margin: clamp(42px, 7vw, 96px) auto 0;
+  grid-template-columns: minmax(0, 760px);
+  justify-content: center;
+  margin: clamp(92px, 13vw, 150px) auto 0;
   max-width: 1180px;
+  min-height: 58svh;
+  text-align: center;
 }
 
 .hero-copy {
+  color: var(--tile-blue);
   max-width: 640px;
+  margin: 0 auto;
   position: relative;
   z-index: 2;
 }
 
 .eyebrow {
-  color: var(--sun);
+  color: var(--tile-blue);
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.12em;
@@ -131,6 +136,7 @@ h2 {
 }
 
 h1 {
+  color: inherit;
   font-size: clamp(3.8rem, 7vw, 5.9rem);
   line-height: 0.92;
   margin-bottom: 26px;
@@ -144,13 +150,14 @@ h2 {
 }
 
 .lead {
-  color: var(--bruno);
+  color: var(--tile-blue);
   font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 1.6;
   max-width: 560px;
 }
 
 .hero-actions {
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -168,28 +175,13 @@ h2 {
 
 .primary {
   background: var(--sun);
-  color: var(--deep);
+  color: var(--tile-blue);
 }
 
 .secondary {
-  border: 1px solid var(--bruno);
-  color: var(--bruno);
-}
-
-.hero-media {
-  min-height: auto;
-  position: relative;
-  z-index: 1;
-}
-
-.hero-main {
-  border: 8px solid var(--cream);
-  object-fit: cover;
-  aspect-ratio: 0.72;
-  border-radius: 999px 999px 8px 8px;
-  height: min(68vh, 640px);
-  object-position: center;
-  width: 100%;
+  background: var(--cream);
+  border: 1px solid var(--tile-blue);
+  color: var(--tile-blue);
 }
 
 .brand-panel,
@@ -484,11 +476,6 @@ h2 {
 
   h2 {
     font-size: clamp(2.25rem, 12vw, 3.2rem);
-  }
-
-  .hero-main {
-    height: 460px;
-    width: 100%;
   }
 
   .brand-panel {
