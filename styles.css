@@ -376,7 +376,23 @@ h2 {
 }
 
 .catalog {
-  background: var(--neptune);
+  background-color: #061126;
+  background-image:
+    linear-gradient(180deg, #06112622 0%, #061126aa 56%, #061126 100%),
+    url("./public/assets/azulejo-horizontal.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.catalog .eyebrow {
+  color: var(--naples);
+}
+
+.catalog h2,
+.catalog .catalog-heading p {
+  color: var(--cream);
+  text-shadow: 0 1px 0 #061126;
 }
 
 .catalog-heading {
@@ -478,6 +494,10 @@ h2 {
 }
 
 @media (max-width: 980px) {
+  .catalog {
+    background-attachment: scroll;
+  }
+
   .hero-grid,
   .brand-panel,
   .tile-section {
