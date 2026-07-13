@@ -48,7 +48,11 @@ main {
 .hero {
   min-height: 100svh;
   padding: 24px clamp(18px, 4vw, 64px) 56px;
-  background: var(--cream) url("./public/assets/hero-azulejo-cartela.png") center / cover no-repeat;
+  background-color: var(--cream);
+  background-image: url("./public/assets/hero-azulejo-cartela.png?v=20260713");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: min(100vw, 1420px) auto;
   color: var(--tile-blue);
 }
 
@@ -452,6 +456,7 @@ h2 {
 
 @media (max-width: 640px) {
   .hero {
+    background-size: auto 100%;
     padding-top: 18px;
   }
 
