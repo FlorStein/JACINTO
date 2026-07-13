@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>JACINTO | Local de plantas</title>
+    <title>JACINTO | Casa de plantas y cafetería</title>
     <meta
       name="description"
-      content="Portfolio web para JACINTO, un local boutique de plantas, macetas y especies seleccionadas."
+      content="Portfolio web para JACINTO, una casa de plantas, cafetería y pâtisserie con estética de azulejos azules."
     />
     <link rel="icon" href="./public/favicon.svg" />
-    <link rel="stylesheet" href="./styles.css?v=20260713-hero-cartela" />
+    <link rel="stylesheet" href="./styles.css?v=20260713-cafe-patisserie" />
   </head>
   <body>
     <main>
@@ -18,6 +18,7 @@
           <a class="wordmark" href="#inicio" aria-label="JACINTO inicio">JACINTO</a>
           <div class="nav-links">
             <a href="#local">Local</a>
+            <a href="#patisserie">Café</a>
             <a href="#catalogo">Catálogo</a>
             <a href="#visita">Visita</a>
           </div>
@@ -25,18 +26,17 @@
 
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Local de plantas y cerámica</p>
+            <p class="eyebrow">Casa de plantas, café y pâtisserie</p>
             <h1>JACINTO</h1>
             <p class="lead">
-              Un local de plantas de interior, macetas artesanales y especies
-              difíciles de encontrar, pensado como un refugio verde en plena ciudad.
+              Un refugio de plantas, café de especialidad y pastelería delicada,
+              pensado para quedarse un rato entre hojas, azulejos y algo dulce.
             </p>
             <div class="hero-actions">
               <a class="button primary" href="#catalogo">Ver plantas</a>
-              <a class="button secondary" href="#local">Recorrer el local</a>
+              <a class="button secondary" href="#patisserie">Ver pâtisserie</a>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -46,25 +46,48 @@
         </div>
         <div>
           <p class="eyebrow">El local</p>
-          <h2>Un espacio botánico con aire vintage</h2>
+          <h2>Un espacio botánico con aroma a café</h2>
           <p>
-            Entre estantes de madera, macetas de terracota y hojas colgantes,
-            JACINTO se siente como una pausa verde: cálido, luminoso y pensado
-            para elegir plantas con calma.
+            Entre limoneros, azulejos azules y vitrinas de pastelería,
+            JACINTO se siente como una pausa luminosa: un lugar para elegir
+            plantas, tomar café y llevarse algo recién horneado.
           </p>
         </div>
       </section>
 
       <section class="shop-story" id="local">
         <div class="section-heading">
-          <p class="eyebrow">El local</p>
-          <h2>Una tienda para mirar lento</h2>
+          <p class="eyebrow">La barra</p>
+          <h2>Café, plantas y azulejos azules</h2>
+          <p>
+            La barra combina vajilla, madera clara, plantas de interior y un mostrador
+            revestido en azulejos: el punto de encuentro entre vivero boutique y cafetería.
+          </p>
         </div>
-        <div class="story-grid">
-          <figure class="story-card story-card-1"><img src="./public/assets/image-01.jpg" alt="Pasillo del local con plantas colgantes y estantes de macetas" /></figure>
-          <figure class="story-card story-card-2"><img src="./public/assets/image-02.jpg" alt="Rincon del local con macetas de terracota y plantas tropicales" /></figure>
-          <figure class="story-card story-card-3"><img src="./public/assets/image-03.jpg" alt="Vidriera de plantas iluminada con puerta de madera" /></figure>
-          <figure class="story-card story-card-4"><img src="./public/assets/image-04.jpg" alt="Mesa central del local con plantines y lamparas colgantes" /></figure>
+        <figure class="bar-frame">
+          <img src="./public/assets/cafe-bar.jpg" alt="Barra de cafetería con azulejos azules, plantas y vitrina de pastelería" />
+        </figure>
+      </section>
+
+      <section class="patisserie" id="patisserie">
+        <div class="section-heading catalog-heading">
+          <div>
+            <p class="eyebrow">Cafetería y pâtisserie</p>
+            <h2>Dulces de vitrina</h2>
+          </div>
+          <p>
+            Tartas de pistacho, croissants rellenos, cakes florales y piezas pequeñas
+            para acompañar café entre plantas.
+          </p>
+        </div>
+
+        <div class="sweet-grid">
+          <article class="sweet-card"><img src="./public/assets/patisserie-01.jpg" alt="Tartitas de pistacho y frambuesa" /><div><span>Tartas</span><h3>Pistacho y frambuesa</h3></div></article>
+          <article class="sweet-card"><img src="./public/assets/patisserie-02.jpg" alt="Croissants y piezas laminadas en vitrina" /><div><span>Laminados</span><h3>Croissants de temporada</h3></div></article>
+          <article class="sweet-card"><img src="./public/assets/patisserie-03.jpg" alt="Budín floral con glaseado lila" /><div><span>Cakes</span><h3>Flores comestibles</h3></div></article>
+          <article class="sweet-card"><img src="./public/assets/patisserie-04.jpg" alt="Torta de limón y lavanda" /><div><span>Tortas</span><h3>Limón y lavanda</h3></div></article>
+          <article class="sweet-card"><img src="./public/assets/patisserie-05.jpg" alt="Cupcakes decorados con flores" /><div><span>Pequeños</span><h3>Cupcakes botánicos</h3></div></article>
+          <article class="sweet-card"><img src="./public/assets/patisserie-06.jpg" alt="Torta con arándanos y flores azules" /><div><span>Para compartir</span><h3>Arándanos y crema</h3></div></article>
         </div>
       </section>
 
@@ -73,7 +96,7 @@
       <section class="catalog" id="catalogo">
         <div class="section-heading catalog-heading">
           <div>
-          <p class="eyebrow">En venta</p>
+            <p class="eyebrow">Vivero boutique</p>
             <h2>Plantas seleccionadas</h2>
           </div>
           <p>
@@ -104,12 +127,12 @@
       <section class="visit" id="visita">
         <div>
           <p class="eyebrow">Visita</p>
-          <h2>Plantas felices, personas felices.</h2>
+          <h2>Café, plantas y pastelería para quedarse.</h2>
         </div>
         <div class="visit-details">
           <p>Martes a sábado</p>
           <p>11:00 - 19:30</p>
-          <p>Asesoría de cuidado incluida</p>
+          <p>Café, pâtisserie y asesoría verde</p>
         </div>
       </section>
     </main>

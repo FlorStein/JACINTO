@@ -198,6 +198,7 @@ h2 {
 
 .brand-panel,
 .shop-story,
+.patisserie,
 .catalog,
 .tile-section,
 .visit {
@@ -258,6 +259,29 @@ h2 {
   max-width: 1180px;
 }
 
+.section-heading > p:not(.eyebrow) {
+  color: var(--bruno);
+  font-size: 1.04rem;
+  line-height: 1.65;
+  max-width: 720px;
+}
+
+.bar-frame {
+  border: 2px solid var(--bruno);
+  border-radius: 8px;
+  margin: 0 auto;
+  max-width: 1180px;
+  overflow: hidden;
+}
+
+.bar-frame img {
+  aspect-ratio: 1.65;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
 .story-grid {
   display: grid;
   gap: 18px;
@@ -291,6 +315,53 @@ h2 {
   background:
     url("./public/assets/azulejo-horizontal.jpg") center / cover fixed;
   min-height: clamp(340px, 48vw, 620px);
+}
+
+.patisserie {
+  background: var(--cream);
+}
+
+.sweet-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0 auto;
+  max-width: 1180px;
+}
+
+.sweet-card {
+  background: var(--cream);
+  border: 1px solid var(--bruno);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.sweet-card img {
+  aspect-ratio: 0.92;
+  object-fit: cover;
+  width: 100%;
+}
+
+.sweet-card div {
+  min-height: 126px;
+  padding: 18px;
+}
+
+.sweet-card span {
+  color: var(--blue);
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.sweet-card h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+  line-height: 1.05;
+  margin-bottom: 0;
 }
 
 .catalog {
@@ -419,6 +490,10 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .sweet-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .catalog-heading,
   .visit {
     align-items: start;
@@ -473,7 +548,8 @@ h2 {
   }
 
   .story-grid,
-  .product-grid {
+  .product-grid,
+  .sweet-grid {
     grid-template-columns: 1fr;
   }
 
@@ -487,6 +563,10 @@ h2 {
 
 
   .product-info {
+    min-height: auto;
+  }
+
+  .sweet-card div {
     min-height: auto;
   }
 }
