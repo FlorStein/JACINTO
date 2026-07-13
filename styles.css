@@ -230,33 +230,19 @@ h2 {
 }
 
 .hero-media {
-  display: grid;
-  gap: 16px;
-  grid-template-columns: 1fr;
   min-height: auto;
   position: relative;
   z-index: 1;
 }
 
-.hero-main,
-.hero-overlap {
+.hero-main {
   border: 8px solid rgba(255, 246, 215, 0.78);
   box-shadow: 0 28px 70px rgba(5, 25, 16, 0.36);
   object-fit: cover;
-  position: static;
-}
-
-.hero-main {
   aspect-ratio: 0.78;
   border-radius: 120px 120px 8px 8px;
-  height: min(58vh, 520px);
-  width: 100%;
-}
-
-.hero-overlap {
-  aspect-ratio: 1.18;
-  border-radius: 8px;
-  height: 220px;
+  height: min(68vh, 640px);
+  object-position: center;
   width: 100%;
 }
 
@@ -284,7 +270,6 @@ h2 {
 }
 
 .brand-panel p:not(.eyebrow),
-.tile-copy p,
 .catalog-heading p {
   color: rgba(20, 57, 46, 0.76);
   font-size: 1.04rem;
@@ -371,46 +356,10 @@ h2 {
 }
 
 .tile-section {
-  align-items: center;
   background:
-    linear-gradient(90deg, rgba(255, 248, 216, 0.92), rgba(168, 204, 231, 0.58)),
+    linear-gradient(rgba(255, 248, 216, 0.02), rgba(255, 248, 216, 0.02)),
     url("./public/assets/image-06.jpg") center / cover fixed;
-  color: var(--cream);
-  display: grid;
-  gap: 34px;
-  grid-template-columns: minmax(0, 0.7fr) minmax(300px, 0.55fr);
-  min-height: 620px;
-}
-
-.tile-copy {
-  background: rgba(255, 248, 216, 0.94);
-  border: 1px solid rgba(63, 115, 149, 0.26);
-  border-radius: 8px;
-  color: var(--ink);
-  justify-self: end;
-  max-width: 650px;
-  padding: clamp(24px, 4vw, 46px);
-}
-
-.tile-copy p {
-  color: rgba(20, 57, 46, 0.76);
-}
-
-.palette-card {
-  background: var(--paper);
-  border: 12px solid var(--paper);
-  border-radius: 8px;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.24);
-  margin: 0;
-  max-width: 360px;
-  overflow: hidden;
-}
-
-.palette-card img {
-  aspect-ratio: 0.42;
-  height: min(74vh, 620px);
-  object-fit: cover;
-  width: 100%;
+  min-height: clamp(360px, 58vw, 760px);
 }
 
 .catalog {
@@ -527,10 +476,6 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .hero-media {
-    grid-template-columns: 1fr 1fr;
-  }
-
   .story-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: 260px 260px;
@@ -579,17 +524,8 @@ h2 {
     font-size: clamp(2.25rem, 12vw, 3.2rem);
   }
 
-  .hero-media {
-    grid-template-columns: 1fr;
-  }
-
   .hero-main {
-    height: 360px;
-    width: 100%;
-  }
-
-  .hero-overlap {
-    height: 260px;
+    height: 460px;
     width: 100%;
   }
 
@@ -615,9 +551,6 @@ h2 {
     min-height: 320px;
   }
 
-  .palette-card {
-    max-width: 100%;
-  }
 
   .product-info {
     min-height: auto;
