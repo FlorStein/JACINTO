@@ -2,11 +2,13 @@
   --ink: #14392e;
   --deep: #0b2e24;
   --leaf: #556b2f;
+  --olive: #8d984f;
   --sky: #8fb9dc;
   --blue: #1f55a9;
   --sun: #f3c94c;
   --cream: #fff6d7;
   --paper: #fffaf0;
+  --soft: #fbf0c9;
 }
 
 * {
@@ -42,7 +44,7 @@ main {
   min-height: 100svh;
   padding: 24px clamp(18px, 4vw, 64px) 56px;
   background:
-    linear-gradient(90deg, rgba(20, 57, 46, 0.84), rgba(20, 57, 46, 0.22) 44%, rgba(255, 246, 215, 0.94)),
+    linear-gradient(90deg, rgba(20, 57, 46, 0.88), rgba(20, 57, 46, 0.62) 42%, rgba(20, 57, 46, 0.16)),
     url("./public/assets/image-01.jpg") center / cover;
   color: var(--cream);
 }
@@ -70,43 +72,70 @@ main {
 }
 
 .logo-mark {
-  align-items: flex-end;
   background: var(--cream);
-  border-radius: 999px 999px 16px 16px;
-  display: grid;
-  height: 50px;
-  justify-items: center;
-  overflow: hidden;
+  border: 2px solid rgba(20, 57, 46, 0.18);
+  border-radius: 50%;
+  display: block;
+  height: 42px;
   position: relative;
-  width: 32px;
+  width: 42px;
 }
 
 .logo-mark span,
 .logo-mark i {
   background: var(--ink);
-  border-radius: 999px;
   display: block;
   position: absolute;
 }
 
 .logo-mark span {
-  bottom: 5px;
-  height: 36px;
-  width: 4px;
+  border-radius: 999px;
+  bottom: 9px;
+  height: 24px;
+  left: 19px;
+  width: 3px;
 }
 
 .logo-mark i {
+  background: transparent;
+  border: 3px solid var(--ink);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
   height: 16px;
+  left: 18px;
+  top: 8px;
+  transform: rotate(26deg);
+  width: 16px;
+}
+
+.logo-mark::before,
+.logo-mark::after {
+  background: var(--ink);
+  border-radius: 100% 0 100% 0;
+  content: "";
+  height: 13px;
+  position: absolute;
+  top: 18px;
+  width: 20px;
+}
+
+.logo-mark::before {
+  left: 8px;
+  transform: rotate(-24deg);
+}
+
+.logo-mark::after {
   right: 7px;
-  top: 14px;
-  transform: rotate(-35deg);
-  width: 9px;
+  transform: rotate(118deg);
 }
 
 .nav-links {
-  background: rgba(255, 250, 240, 0.18);
-  border: 1px solid rgba(255, 250, 240, 0.34);
+  background: rgba(255, 246, 215, 0.9);
+  border: 1px solid rgba(20, 57, 46, 0.2);
   border-radius: 999px;
+  box-shadow: 0 14px 30px rgba(5, 25, 16, 0.12);
+  color: var(--ink);
   gap: 6px;
   padding: 6px;
 }
@@ -114,24 +143,25 @@ main {
 .nav-links a {
   border-radius: 999px;
   font-size: 0.88rem;
+  font-weight: 800;
   padding: 10px 14px;
 }
 
 .nav-links a:hover {
-  background: rgba(255, 250, 240, 0.22);
+  background: rgba(20, 57, 46, 0.12);
 }
 
 .hero-grid {
-  align-items: end;
+  align-items: center;
   display: grid;
-  gap: clamp(32px, 6vw, 80px);
-  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.76fr);
-  margin: clamp(58px, 9vw, 120px) auto 0;
+  gap: clamp(34px, 5vw, 70px);
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 0.86fr);
+  margin: clamp(42px, 7vw, 96px) auto 0;
   max-width: 1180px;
 }
 
 .hero-copy {
-  max-width: 650px;
+  max-width: 760px;
 }
 
 .eyebrow {
@@ -157,10 +187,10 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(4.1rem, 11vw, 9.4rem);
-  line-height: 0.78;
-  margin-bottom: 28px;
-  max-width: 820px;
+  font-size: clamp(4rem, 8vw, 7.2rem);
+  line-height: 0.86;
+  margin-bottom: 26px;
+  max-width: 720px;
 }
 
 h2 {
@@ -202,33 +232,34 @@ h2 {
 }
 
 .hero-media {
-  min-height: 560px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr 0.72fr;
+  min-height: auto;
   position: relative;
 }
 
 .hero-main,
 .hero-overlap {
-  border: 10px solid rgba(255, 246, 215, 0.72);
+  border: 8px solid rgba(255, 246, 215, 0.78);
   box-shadow: 0 28px 70px rgba(5, 25, 16, 0.36);
   object-fit: cover;
-  position: absolute;
+  position: static;
 }
 
 .hero-main {
   aspect-ratio: 0.78;
-  border-radius: 999px 999px 28px 28px;
-  height: min(66vh, 650px);
-  right: 0;
-  top: 0;
-  width: min(78%, 420px);
+  border-radius: 140px 140px 8px 8px;
+  height: 560px;
+  width: 100%;
 }
 
 .hero-overlap {
-  aspect-ratio: 0.72;
-  border-radius: 24px;
-  bottom: 0;
-  left: 0;
-  width: min(48%, 250px);
+  align-self: end;
+  aspect-ratio: 0.76;
+  border-radius: 8px;
+  height: 390px;
+  width: 100%;
 }
 
 .brand-panel,
@@ -241,7 +272,9 @@ h2 {
 
 .brand-panel {
   align-items: center;
-  background: var(--cream);
+  background:
+    linear-gradient(90deg, rgba(255, 246, 215, 0.94), rgba(255, 250, 240, 0.98)),
+    var(--cream);
   display: grid;
   gap: clamp(30px, 6vw, 80px);
   grid-template-columns: minmax(220px, 0.45fr) minmax(0, 0.8fr);
@@ -261,50 +294,49 @@ h2 {
 }
 
 .arch-logo {
-  background: var(--ink);
-  border-radius: 130px 130px 22px 22px;
-  height: 320px;
+  align-items: center;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 999px 999px 18px 18px;
+  box-shadow: 16px 16px 0 var(--sun);
+  display: flex;
+  height: 300px;
+  justify-content: center;
   overflow: hidden;
   position: relative;
   width: 190px;
 }
 
+.arch-logo::before {
+  color: var(--ink);
+  content: "J";
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 10rem;
+  font-weight: 800;
+  line-height: 1;
+  transform: translateY(-4px);
+}
+
 .stem,
 .flower,
 .leaf {
-  background: var(--cream);
+  display: none;
+}
+
+.arch-logo::after {
+  background:
+    radial-gradient(circle at 50% 50%, var(--sun) 0 18%, transparent 19%),
+    radial-gradient(circle at 50% 18%, var(--ink) 0 14%, transparent 15%),
+    radial-gradient(circle at 82% 50%, var(--ink) 0 14%, transparent 15%),
+    radial-gradient(circle at 50% 82%, var(--ink) 0 14%, transparent 15%),
+    radial-gradient(circle at 18% 50%, var(--ink) 0 14%, transparent 15%);
+  content: "";
+  height: 74px;
   position: absolute;
+  right: 28px;
+  top: 54px;
+  width: 74px;
 }
-
-.stem {
-  border-radius: 999px;
-  bottom: 26px;
-  width: 6px;
-}
-
-.stem-one { height: 230px; left: 90px; transform: rotate(14deg); }
-.stem-two { height: 170px; left: 68px; transform: rotate(-22deg); }
-.stem-three { height: 195px; right: 54px; transform: rotate(32deg); }
-
-.flower {
-  border-radius: 50% 50% 45% 45%;
-  height: 38px;
-  width: 42px;
-}
-
-.flower-one { right: 34px; top: 74px; }
-.flower-two { left: 44px; top: 132px; }
-.flower-three { bottom: 72px; right: 58px; }
-
-.leaf {
-  border-radius: 100% 0 100% 0;
-  height: 34px;
-  width: 56px;
-}
-
-.leaf-one { left: 25px; top: 55px; transform: rotate(-30deg); }
-.leaf-two { right: 28px; top: 150px; transform: rotate(20deg); }
-.leaf-three { bottom: 112px; left: 28px; transform: rotate(38deg); }
 
 .section-heading {
   margin: 0 auto 36px;
@@ -342,38 +374,45 @@ h2 {
 
 .tile-section {
   align-items: center;
-  background: var(--deep);
+  background:
+    linear-gradient(90deg, rgba(255, 250, 240, 0.94), rgba(255, 250, 240, 0.78)),
+    url("./public/assets/image-06.jpg") center / cover fixed;
   color: var(--cream);
   display: grid;
   gap: 34px;
   grid-template-columns: minmax(0, 0.7fr) minmax(300px, 0.55fr);
+  min-height: 620px;
 }
 
 .tile-copy {
+  background: rgba(255, 250, 240, 0.94);
+  border: 1px solid rgba(31, 85, 169, 0.2);
+  border-radius: 8px;
+  color: var(--ink);
   justify-self: end;
   max-width: 650px;
+  padding: clamp(24px, 4vw, 46px);
 }
 
 .tile-copy p {
-  color: rgba(255, 246, 215, 0.82);
+  color: rgba(20, 57, 46, 0.76);
 }
 
-.tile-pattern {
-  aspect-ratio: 1.55;
-  background:
-    radial-gradient(circle at 50% 50%, transparent 0 9%, var(--blue) 10% 11%, transparent 12%),
-    radial-gradient(circle at 0 0, transparent 0 20%, var(--blue) 21% 23%, transparent 24%),
-    radial-gradient(circle at 100% 0, transparent 0 20%, var(--blue) 21% 23%, transparent 24%),
-    radial-gradient(circle at 0 100%, transparent 0 20%, var(--blue) 21% 23%, transparent 24%),
-    radial-gradient(circle at 100% 100%, transparent 0 20%, var(--blue) 21% 23%, transparent 24%),
-    linear-gradient(45deg, transparent 44%, var(--sky) 45% 48%, transparent 49%),
-    linear-gradient(-45deg, transparent 44%, var(--sky) 45% 48%, transparent 49%),
-    var(--cream);
-  background-size: 120px 120px;
-  border: 12px solid var(--cream);
+.palette-card {
+  background: var(--paper);
+  border: 12px solid var(--paper);
   border-radius: 8px;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.24);
-  min-height: 360px;
+  margin: 0;
+  max-width: 360px;
+  overflow: hidden;
+}
+
+.palette-card img {
+  aspect-ratio: 0.42;
+  height: min(74vh, 620px);
+  object-fit: cover;
+  width: 100%;
 }
 
 .catalog {
@@ -489,7 +528,7 @@ h2 {
   }
 
   .hero-media {
-    min-height: 480px;
+    grid-template-columns: 1fr 1fr;
   }
 
   .story-grid {
@@ -541,16 +580,17 @@ h2 {
   }
 
   .hero-media {
-    min-height: 390px;
+    grid-template-columns: 1fr;
   }
 
   .hero-main {
     height: 360px;
-    width: 76%;
+    width: 100%;
   }
 
   .hero-overlap {
-    width: 48%;
+    height: 260px;
+    width: 100%;
   }
 
   .brand-panel {
@@ -575,8 +615,8 @@ h2 {
     min-height: 320px;
   }
 
-  .tile-pattern {
-    min-height: 260px;
+  .palette-card {
+    max-width: 100%;
   }
 
   .product-info {
