@@ -254,6 +254,17 @@ h2 {
   width: 100%;
 }
 
+.azulejo-divider {
+  background-color: var(--cream);
+  background-image: url("./public/assets/azulejo-divider.jpg");
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: 280px auto;
+  border-bottom: 2px solid var(--bruno);
+  border-top: 2px solid var(--bruno);
+  height: clamp(78px, 8vw, 116px);
+}
+
 .section-heading {
   margin: 0 auto 36px;
   max-width: 1180px;
@@ -524,6 +535,11 @@ h2 {
   .nav-links a {
     font-size: 0.78rem;
     padding: 9px 10px;
+  }
+
+  .azulejo-divider {
+    background-size: 220px auto;
+    height: 76px;
   }
 
   h1 {
