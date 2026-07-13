@@ -259,10 +259,10 @@ h2 {
   background-image: url("./public/assets/azulejo-divider.jpg");
   background-position: center;
   background-repeat: repeat-x;
-  background-size: 280px auto;
+  background-size: 360px auto;
   border-bottom: 2px solid var(--bruno);
   border-top: 2px solid var(--bruno);
-  height: clamp(78px, 8vw, 116px);
+  height: clamp(98px, 10vw, 142px);
 }
 
 .section-heading {
@@ -538,8 +538,8 @@ h2 {
   }
 
   .azulejo-divider {
-    background-size: 220px auto;
-    height: 76px;
+    background-size: 280px auto;
+    height: 92px;
   }
 
   h1 {
