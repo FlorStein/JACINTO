@@ -47,10 +47,8 @@ main {
 .hero {
   min-height: 100svh;
   padding: 24px clamp(18px, 4vw, 64px) 56px;
-  background:
-    linear-gradient(90deg, rgba(15, 82, 104, 0.92), rgba(15, 82, 104, 0.62) 45%, rgba(143, 189, 159, 0.18)),
-    url("./public/assets/image-01.jpg") center / cover;
-  color: var(--cream);
+  background: var(--cream) url("./public/assets/azulejo-horizontal.jpg") center / cover fixed;
+  color: var(--bruno);
 }
 
 .nav {
@@ -75,64 +73,10 @@ main {
   font-weight: 800;
 }
 
-.logo-mark {
-  display: none;
-}
-
-.logo-mark span,
-.logo-mark i {
-  background: var(--ink);
-  display: block;
-  position: absolute;
-}
-
-.logo-mark span {
-  border-radius: 999px;
-  bottom: 9px;
-  height: 24px;
-  left: 19px;
-  width: 3px;
-}
-
-.logo-mark i {
-  background: transparent;
-  border: 3px solid var(--ink);
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-  border-radius: 50%;
-  height: 16px;
-  left: 18px;
-  top: 8px;
-  transform: rotate(26deg);
-  width: 16px;
-}
-
-.logo-mark::before,
-.logo-mark::after {
-  background: var(--ink);
-  border-radius: 100% 0 100% 0;
-  content: "";
-  height: 13px;
-  position: absolute;
-  top: 18px;
-  width: 20px;
-}
-
-.logo-mark::before {
-  left: 8px;
-  transform: rotate(-24deg);
-}
-
-.logo-mark::after {
-  right: 7px;
-  transform: rotate(118deg);
-}
-
 .nav-links {
-  background: rgba(251, 243, 207, 0.94);
-  border: 1px solid rgba(15, 82, 104, 0.28);
+  background: var(--cream);
+  border: 1px solid var(--bruno);
   border-radius: 999px;
-  box-shadow: 0 14px 30px rgba(5, 25, 16, 0.12);
   color: var(--ink);
   gap: 6px;
   padding: 6px;
@@ -146,7 +90,7 @@ main {
 }
 
 .nav-links a:hover {
-  background: rgba(20, 57, 46, 0.12);
+  background: var(--light-olive);
 }
 
 .hero-grid {
@@ -200,7 +144,7 @@ h2 {
 }
 
 .lead {
-  color: rgba(255, 246, 215, 0.92);
+  color: var(--bruno);
   font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 1.6;
   max-width: 560px;
@@ -228,7 +172,8 @@ h2 {
 }
 
 .secondary {
-  border: 1px solid rgba(251, 243, 207, 0.68);
+  border: 1px solid var(--bruno);
+  color: var(--bruno);
 }
 
 .hero-media {
@@ -239,10 +184,9 @@ h2 {
 
 .hero-main {
   border: 8px solid var(--cream);
-  box-shadow: 0 28px 70px rgba(5, 25, 16, 0.36);
   object-fit: cover;
-  aspect-ratio: 0.78;
-  border-radius: 120px 120px 8px 8px;
+  aspect-ratio: 0.72;
+  border-radius: 999px 999px 8px 8px;
   height: min(68vh, 640px);
   object-position: center;
   width: 100%;
@@ -258,9 +202,7 @@ h2 {
 
 .brand-panel {
   align-items: center;
-  background:
-    linear-gradient(90deg, rgba(251, 243, 207, 0.98), rgba(247, 212, 103, 0.28)),
-    var(--cream);
+  background: var(--cream);
   display: grid;
   gap: clamp(30px, 6vw, 80px);
   grid-template-columns: minmax(220px, 0.45fr) minmax(0, 0.8fr);
@@ -273,54 +215,78 @@ h2 {
 
 .brand-panel p:not(.eyebrow),
 .catalog-heading p {
-  color: rgba(20, 57, 46, 0.76);
+  color: var(--bruno);
   font-size: 1.04rem;
   line-height: 1.65;
 }
 
 .arch-logo {
   align-items: center;
-  background: var(--paper);
-  border: 2px solid var(--ink);
-  border-radius: 999px 999px 18px 18px;
-  box-shadow: 16px 16px 0 var(--sun);
+  background: var(--cream);
+  border: 2px solid var(--bruno);
+  border-radius: 999px 999px 0 0;
   display: flex;
   height: 300px;
   justify-content: center;
-  overflow: hidden;
   position: relative;
-  width: 190px;
+  width: 210px;
 }
 
 .arch-logo::before {
-  color: var(--ink);
+  color: var(--bruno);
   content: "J";
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 10rem;
+  font-size: 10.5rem;
   font-weight: 800;
   line-height: 1;
-  transform: translateY(-4px);
-}
-
-.stem,
-.flower,
-.leaf {
-  display: none;
+  transform: translateY(18px);
 }
 
 .arch-logo::after {
-  background:
-    radial-gradient(circle at 50% 50%, var(--sun) 0 18%, transparent 19%),
-    radial-gradient(circle at 50% 18%, var(--ink) 0 14%, transparent 15%),
-    radial-gradient(circle at 82% 50%, var(--ink) 0 14%, transparent 15%),
-    radial-gradient(circle at 50% 82%, var(--ink) 0 14%, transparent 15%),
-    radial-gradient(circle at 18% 50%, var(--ink) 0 14%, transparent 15%);
+  background: var(--naples);
+  bottom: -20px;
   content: "";
-  height: 74px;
+  height: 100%;
   position: absolute;
-  right: 28px;
-  top: 54px;
-  width: 74px;
+  right: -20px;
+  width: 100%;
+  z-index: -1;
+}
+
+.flower-dot,
+.flower-center {
+  border-radius: 999px;
+  position: absolute;
+}
+
+.flower-dot {
+  background: var(--bruno);
+  border: 2px solid var(--naples);
+  height: 30px;
+  width: 30px;
+}
+
+.flower-center {
+  background: var(--naples);
+  height: 26px;
+  right: 70px;
+  top: 108px;
+  width: 26px;
+}
+
+.dot-top {
+  right: 70px;
+  top: 72px;
+}
+
+.dot-left {
+  right: 100px;
+  top: 108px;
+}
+
+.dot-right {
+  right: 38px;
+  top: 108px;
 }
 
 .section-heading {
@@ -364,9 +330,7 @@ h2 {
 }
 
 .catalog {
-  background:
-    linear-gradient(180deg, rgba(143, 189, 159, 0.28), rgba(251, 243, 207, 1) 30%),
-    var(--cream);
+  background: var(--neptune);
 }
 
 .catalog-heading {
@@ -389,15 +353,14 @@ h2 {
 }
 
 .product-card {
-  background: rgba(251, 243, 207, 0.96);
-  border: 1px solid rgba(15, 82, 104, 0.18);
+  background: var(--cream);
+  border: 1px solid var(--bruno);
   border-radius: 8px;
   overflow: hidden;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .product-card:hover {
-  box-shadow: 0 22px 48px rgba(35, 59, 48, 0.14);
   transform: translateY(-4px);
 }
 
@@ -430,16 +393,14 @@ h2 {
 }
 
 .product-info p {
-  color: rgba(20, 57, 46, 0.68);
+  color: var(--bruno);
   line-height: 1.45;
   margin-bottom: 0;
 }
 
 .visit {
   align-items: end;
-  background:
-    linear-gradient(rgba(15, 82, 104, 0.52), rgba(15, 82, 104, 0.76)),
-    url("./public/assets/image-04.jpg") center / cover;
+  background: var(--bruno);
   color: var(--cream);
   display: flex;
   gap: 28px;
@@ -452,7 +413,7 @@ h2 {
 }
 
 .visit-details {
-  background: rgba(251, 243, 207, 0.94);
+  background: var(--cream);
   border-radius: 8px;
   color: var(--deep);
   min-width: min(100%, 330px);
@@ -460,7 +421,7 @@ h2 {
 }
 
 .visit-details p {
-  border-bottom: 1px solid rgba(20, 57, 46, 0.16);
+  border-bottom: 1px solid var(--bruno);
   font-weight: 800;
   margin: 0;
   padding: 16px 0;
@@ -536,7 +497,7 @@ h2 {
 
   .arch-logo {
     height: 250px;
-    width: 150px;
+    width: 170px;
   }
 
   .story-grid,
