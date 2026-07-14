@@ -379,13 +379,30 @@ h2 {
 }
 
 .catalog .eyebrow {
-  color: var(--naples);
+  color: var(--tile-blue);
 }
 
 .catalog h2,
 .catalog .catalog-heading p {
-  color: var(--cream);
-  text-shadow: 0 1px 0 #061126;
+  color: var(--tile-blue);
+  text-shadow: none;
+}
+
+.catalog-card {
+  background: var(--naples);
+  border: 2px solid var(--tile-blue);
+  border-radius: 8px;
+  color: var(--tile-blue);
+  margin: 0 auto;
+  max-width: 1240px;
+  overflow: hidden;
+  padding: clamp(24px, 4vw, 46px);
+}
+
+.catalog-card .section-heading {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: none;
 }
 
 .catalog-heading {
@@ -400,18 +417,38 @@ h2 {
 }
 
 .product-grid {
-  display: grid;
+  display: flex;
   gap: 18px;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin: 0 auto;
-  max-width: 1180px;
+  margin: 0;
+  max-width: none;
+  overflow-x: auto;
+  padding: 4px 4px 18px;
+  scroll-padding-left: 4px;
+  scroll-snap-type: x mandatory;
+}
+
+.product-grid::-webkit-scrollbar {
+  height: 10px;
+}
+
+.product-grid::-webkit-scrollbar-track {
+  background: #fbf3cf;
+  border: 1px solid var(--tile-blue);
+  border-radius: 999px;
+}
+
+.product-grid::-webkit-scrollbar-thumb {
+  background: var(--tile-blue);
+  border-radius: 999px;
 }
 
 .product-card {
   background: var(--cream);
   border: 1px solid var(--bruno);
   border-radius: 8px;
+  flex: 0 0 clamp(230px, 24vw, 310px);
   overflow: hidden;
+  scroll-snap-align: start;
   transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
