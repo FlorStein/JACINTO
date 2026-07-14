@@ -200,7 +200,6 @@ h2 {
 .shop-story,
 .patisserie,
 .catalog,
-.tile-section,
 .visit {
   padding: clamp(58px, 8vw, 110px) clamp(18px, 4vw, 64px);
 }
@@ -320,12 +319,6 @@ h2 {
 
 .story-card-2 {
   grid-column: span 2;
-}
-
-.tile-section {
-  background:
-    url("./public/assets/azulejo-horizontal.jpg") center / cover fixed;
-  min-height: clamp(340px, 48vw, 620px);
 }
 
 .patisserie {
@@ -512,8 +505,7 @@ h2 {
   }
 
   .hero-grid,
-  .brand-panel,
-  .tile-section {
+  .brand-panel {
     grid-template-columns: 1fr;
   }
 
