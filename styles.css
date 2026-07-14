@@ -405,6 +405,44 @@ h2 {
   max-width: none;
 }
 
+.carousel-shell {
+  position: relative;
+}
+
+.carousel-button {
+  align-items: center;
+  background: var(--cream);
+  border: 2px solid var(--tile-blue);
+  border-radius: 999px;
+  color: var(--tile-blue);
+  cursor: pointer;
+  display: flex;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  height: 50px;
+  justify-content: center;
+  line-height: 1;
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  width: 50px;
+  z-index: 3;
+}
+
+.carousel-button:hover {
+  background: var(--tile-blue);
+  color: var(--cream);
+}
+
+.carousel-button-prev {
+  left: -25px;
+}
+
+.carousel-button-next {
+  right: -25px;
+}
+
 .catalog-heading {
   align-items: end;
   display: flex;
@@ -539,6 +577,10 @@ h2 {
 @media (max-width: 980px) {
   .catalog {
     background-attachment: scroll;
+  }
+
+  .carousel-button {
+    display: none;
   }
 
   .hero-grid,
